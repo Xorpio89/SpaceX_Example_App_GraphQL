@@ -1,20 +1,30 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @theme {
-  --color-space-dark: #0a0a0f;
-  --color-space-card: #12121a;
-  --color-space-border: #1e1e2e;
-  --color-space-accent: #6366f1;
-  --color-space-success: #22c55e;
-  --color-space-danger: #ef4444;
-  --color-space-muted: #4b5563;
-  --font-mono: "JetBrains Mono", monospace;
+  /* Maps Tailwind classes to our tokens */
+  --color-bg-base:      #0a0a0f;
+  --color-bg-surface:   #0f0f17;
+  --color-bg-elevated:  #14141e;
+  --color-bg-overlay:   #1a1a26;
+  --color-accent:       #6366f1;
+  --color-text-primary: #f0f0f5;
+  --color-text-muted:   #9090a8;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-body { background-color: var(--color-space-dark); color: #e2e8f0; font-family: var(--font-mono); }
+body {
+  background-color: #0a0a0f;
+  color: #f0f0f5;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* CopilotKit theme */
 .copilotKitPopup, .copilotKitSidebar {
-  --copilot-kit-background-color: #12121a;
+  --copilot-kit-background-color: #0f0f17;
   --copilot-kit-primary-color: #6366f1;
-  --copilot-kit-text-color: #e2e8f0;
+  --copilot-kit-text-color: #f0f0f5;
+  --copilot-kit-border-color: rgba(255,255,255,0.08);
 }
