@@ -1,11 +1,7 @@
-import { CopilotRuntime, AnthropicAdapter, copilotRuntimeNextJSAppRouterHandler } from '@copilotkit/runtime'
-import Anthropic from '@anthropic-ai/sdk'
+import { CopilotRuntime, AnthropicAdapter, copilotRuntimeNextJSAppRouterEndpoint } from '@copilotkit/runtime'
 
-const runtime = new CopilotRuntime()
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-
-export const POST = copilotRuntimeNextJSAppRouterHandler({
-  runtime,
-  serviceAdapter: new AnthropicAdapter({ anthropic }),
+export const POST = copilotRuntimeNextJSAppRouterEndpoint({
+  runtime: new CopilotRuntime(),
+  serviceAdapter: new AnthropicAdapter(),
   endpoint: '/api/copilotkit',
 })
