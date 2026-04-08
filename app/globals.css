@@ -1,27 +1,35 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* CSS Custom Properties — used in JSX via bg-[--var] syntax */
+:root {
+  --color-space-dark:    #0a0a0f;
+  --color-space-card:    #0f0f17;
+  --color-space-elevated:#14141e;
+  --color-space-border:  rgba(255, 255, 255, 0.08);
+  --color-space-accent:  #6366f1;
+  --color-space-success: #22c55e;
+  --color-space-danger:  #ef4444;
+  --color-space-muted:   #9090a8;
+}
 
 @theme {
-  /* Maps Tailwind classes to our tokens */
-  --color-bg-base:      #0a0a0f;
-  --color-bg-surface:   #0f0f17;
-  --color-bg-elevated:  #14141e;
-  --color-bg-overlay:   #1a1a26;
-  --color-accent:       #6366f1;
-  --color-text-primary: #f0f0f5;
-  --color-text-muted:   #9090a8;
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
 body {
-  background-color: #0a0a0f;
+  background-color: var(--color-space-dark);
   color: #f0f0f5;
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* CopilotKit theme */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 999px; }
+
+/* CopilotKit dark theme */
 .copilotKitPopup, .copilotKitSidebar {
   --copilot-kit-background-color: #0f0f17;
   --copilot-kit-primary-color: #6366f1;
