@@ -1,8 +1,18 @@
-import { CopilotRuntime, AnthropicAdapter, copilotRuntimeNextJSAppRouterEndpoint } from '@copilotkit/runtime'
+import { CopilotRuntime, OpenAIAdapter, copilotRuntimeNextJSAppRouterEndpoint } from '@copilotkit/runtime'
+import OpenAI from 'openai'
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENROUTER_API_KEY,
+  baseURL: 'https://openrouter.ai/api/v1',
+  defaultHeaders: {
+    'HTTP-Referer': 'https://spacex-mission-intel.vercel.app',
+    'X-Title': 'SpaceX Mission Intelligence',
+  },
+})
 
 const { handleRequest } = copilotRuntimeNextJSAppRouterEndpoint({
   runtime: new CopilotRuntime(),
-  serviceAdapter: new AnthropicAdapter(),
+  serviceAdapter: new OpenAIAdapter({ openai, model: 'minimax/minimax-m1' }),
   endpoint: '/api/copilotkit',
 })
 
