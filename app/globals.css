@@ -36,3 +36,21 @@ body {
   --copilot-kit-text-color: #f0f0f5;
   --copilot-kit-border-color: rgba(255,255,255,0.08);
 }
+
+/* CopilotKit — vollständige Venice Dark Overrides */
+.copilotKitPopup,
+.copilotKitPopupButton,
+.copilotKitSidebar,
+.copilotKitWindow {
+  --copilot-kit-background-color:          #0f0f17;
+  --copilot-kit-primary-color:             #6366f1;
+  --copilot-kit-secondary-color:           #14141e;
+  --copilot-kit-contrast-color:            #f0f0f5;
+  --copilot-kit-secondary-contrast-color:  #9090a8;
+  --copilot-kit-muted-color:               #9090a8;
+  --copilot-kit-separator-color:           rgba(255,255,255,0.07);
+  --copilot-kit-input-background-color:    #14141e;
+  --copilot-kit-shadow-sm:                 0 1px 4px rgba(0,0,0,0.5);
+  --copilot-kit-shadow-md:                 0 4px 16px rgba(0,0,0,0.6);
+  --copilot-kit-shadow-lg:                 0 8px 32px rgba(0,0,0,0.7);
+}
