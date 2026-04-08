@@ -5,15 +5,14 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "start": "next start"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.86.1",
     "@copilotkit/react-core": "^1.54.1",
     "@copilotkit/react-ui": "^1.54.1",
     "@copilotkit/runtime": "^1.54.1",
-    "next": "^16.2.3",
+    "next": "15.3.9",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
@@ -23,6 +22,6 @@
     "@types/react-dom": "^19",
     "tailwindcss": "^4.2.2",
     "@tailwindcss/postcss": "^4.2.2",
-    "typescript": "^6.0.2"
+    "typescript": "^5"
   }
 }
